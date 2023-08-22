@@ -19,8 +19,6 @@ get_header();
           $email        = sanitize_email($_POST['email']);
           $message      = esc_attr($_POST['message']);
 
-          //echo 'Details.'. $name . ' ' .$phone_number . ' '. $servicename. ' '. $email . ' '. $message;
-
           global $wpdb;
 
           $tableContact = $wpdb->prefix . 'contactdetails';
@@ -34,8 +32,6 @@ get_header();
           );
           $formatContact = array( '%s', '%d', '%s', '%s', '%s' );
           $contactInsert = $wpdb->insert( $tableContact, $dataContact, $formatContact );
-
-          echo $contactInsert;
       }
     ?>
     <div class="container">
