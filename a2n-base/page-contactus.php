@@ -22,45 +22,45 @@ get_header();
         <div class="col-md-5 mx-auto">
           <div class="form_container">
             <div class="heading_container heading_center">
-              <h1>Enquiry Form</h1>
+              <h1><?php the_title();?></h1>
             </div>
             <form action="<?php echo esc_url(get_permalink(208))?>" method="POST">
               <div class="form-row">
                 <div class="form-group col">
-                  <label for="yourname">Your Name (required):</label>
+                  <label for="yourname"><?php _e("Your Name (required):", "a2n-base");?></label>
                   <input type="text" name="yourname" id="yourname" class="form-control" required aria-required="true"/>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-lg-6">
-                  <label for="phonenumber">Phone Number</label>
+                  <label for="phonenumber"><?php _e("Phone Number", "a2n-base");?></label>
                   <input type="number" name="phonenumber" id="phonenumber" class="form-control" required aria-required="true"/>
                 </div>
                 <div class="form-group col-lg-6">
-                  <label for="services">Our Services</label>
+                  <label for="services"><?php _e("Our Services", "a2n-base");?></label>
                   <select name="servicename" id="services" class="form-control wide" required aria-required="true">
-                    <option value="selectservice">Select Service</option>
-                    <option value="home-welding">Home Welding</option>
-                    <option value="machine-welding">Machine Welding</option>
-                    <option value="car-welding">Car Welding</option>
+                    <option value="selectservice"><?php _e("Select Service", "a2n-base");?></option>
+                    <option value="home-welding"><?php _e("Home Welding", "a2n-base");?></option>
+                    <option value="machine-welding"><?php _e("Machine Welding", "a2n-base");?></option>
+                    <option value="car-welding"><?php _e("Car Welding", "a2n-base");?></option>
                   </select>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col">
-                  <label for="email">Email</label>
+                  <label for="email"><?php _e("Email", "a2n-base");?></label>
                   <input type="email" name="email" id="email" class="form-control" required aria-required="true"/>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col">
-                  <label for="message">Message</label>
+                  <label for="message"><?php _e("Message", "a2n-base");?></label>
                   <input type="text" name="message" id="message" class="message-box form-control" required aria-required="true"/>
                 </div>
               </div>
               <div class="btn_box">
-                <button type="submit" name="submitform" title="SEND">
-                  Get In Touch
+                <button type="submit" name="submitform" title="Get In Touch">
+                  <?php _e("Get In Touch", "a2n-base");?>
                 </button>
               </div>
             </form>
