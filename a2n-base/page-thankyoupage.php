@@ -9,9 +9,9 @@
 
 get_header();
 ?>
-    </div>
+  </div>
 	<section id="primary" class="about_section layout_padding">
-    <?php 
+    <?php
       if(isset($_POST['submitform'])){
           $name         = esc_attr($_POST['yourname']);
           $phone_number = absint($_POST['phonenumber']);
@@ -23,7 +23,7 @@ get_header();
 
           $tableContact = $wpdb->prefix . 'contactdetails';
 
-          $dataContact = array( 
+          $dataContact = array(
               'name'   => $name,
               'phonenumber' => $phone_number,
               'servicename'  => $servicename,

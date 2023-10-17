@@ -8,22 +8,24 @@
 
 get_header();
 ?>
-    <?php get_template_part( 'template-parts/homepage', 'slider' ); ?>
+    <?php
+    define("HOMEPAGE_TEMPLATE", "template-parts/homepage");
+    get_template_part( HOMEPAGE_TEMPLATE, 'slider' ); ?>
     </div> <!-- header top ends -->
     <!-- service section -->
-    <?php get_template_part( 'template-parts/homepage', 'services' );?>
+    <?php get_template_part( HOMEPAGE_TEMPLATE, 'services' );?>
     <!-- service section ends -->
 
     <!-- about section -->
-    <?php get_template_part( 'template-parts/homepage', 'aboutus' );?>
+    <?php get_template_part( HOMEPAGE_TEMPLATE, 'aboutus' );?>
     <!-- about section ends -->
 
     <!-- team section -->
-    <?php get_template_part( 'template-parts/homepage', 'team' );?>
+    <?php get_template_part( HOMEPAGE_TEMPLATE, 'team' );?>
     <!-- end team section -->
 
     <!-- client section -->
-    <?php get_template_part( 'template-parts/homepage', 'testimonials' );?>
+    <?php get_template_part( HOMEPAGE_TEMPLATE, 'testimonials' );?>
     <!-- end client section -->
 
   <?php get_footer();?>
