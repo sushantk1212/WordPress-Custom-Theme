@@ -1,12 +1,12 @@
 <section class="slider_section ">
-      <?php 
-         $args = array(  
+      <?php
+         $args = array(
             'post_type' => 'homepage_slider',
             'post_status' => 'publish',
-            'posts_per_page' => -1, 
+            'posts_per_page' => -1,
         );
     
-        $loop = new WP_Query( $args ); 
+        $loop = new WP_Query( $args );
         if($loop-> have_posts()):
             $counter_homeslider = 0;
       ?>
@@ -26,8 +26,9 @@
                     <?php the_content();?>
                     <?php if(!empty($slider_contact_link)): ?>
                     <div class="btn-box">
-                      <a href="<?php echo esc_url($slider_contact_link['url']);?>" 
-                      class="btn1" target="<?php echo $slider_contact_link['target'];?>" rel="bookmark" title="<?php echo $slider_contact_link['title'];?>">
+                      <a href="<?php echo esc_url($slider_contact_link['url']);?>"
+                      class="btn1" target="<?php echo $slider_contact_link['target'];?>"
+                      rel="bookmark" title="<?php echo $slider_contact_link['title'];?>">
                       <?php echo $slider_contact_link['title'];?>
                       </a>
                     </div>
@@ -37,7 +38,7 @@
               </div>
             </div>
           </div>
-          <?php 
+          <?php
             $counter_homeslider++;
             endwhile;
             wp_reset_postdata();

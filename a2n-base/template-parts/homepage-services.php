@@ -1,4 +1,5 @@
-<?php 
+<?php
+
     $page_id = 146;
     $page_data = get_post( $page_id );
     $parent_page_title = $page_data->post_title; // get page title
@@ -47,7 +48,7 @@ if ( $parent_query->have_posts() ) : ?>
                 </div>
               </div>
             </div>
-            <?php 
+            <?php
                 endwhile;
                 wp_reset_postdata();
             ?>
@@ -56,8 +57,8 @@ if ( $parent_query->have_posts() ) : ?>
       </div>
       <?php if(is_front_page()):?>
       <div class="btn-box">
-        <a href="<?php echo esc_url(get_permalink($page_id));?>" 
-        title="<?php echo esc_html($parent_page_title);?>" rel="bookmark"> 
+        <a href="<?php echo esc_url(get_permalink($page_id));?>"
+        title="<?php echo esc_html($parent_page_title);?>" rel="bookmark">
             <?php _e('Read More','a2n-base');?>
         </a>
       </div>

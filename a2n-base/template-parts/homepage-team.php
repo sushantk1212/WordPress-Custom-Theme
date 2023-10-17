@@ -1,4 +1,4 @@
-<?php 
+<?php
     $team_page_id = 148;
     $team_page_data = get_post( $team_page_id );
     $team_page_title = $team_page_data->post_title; // get page title
@@ -11,7 +11,7 @@
 
     $ourteam_query = new WP_Query( $ourteam_args );
 
-if ( $ourteam_query->have_posts() ) :
+if ( $ourteam_query->have_posts() ) {
 ?>
 <section class="team_section layout_padding">
     <div class="container">
@@ -34,7 +34,7 @@ if ( $ourteam_query->have_posts() ) :
       </div>
 
       <div class="row">
-      <?php 
+      <?php
         while ( $ourteam_query->have_posts() ) : $ourteam_query->the_post();
         $designation = get_field('designation');
       ?>
@@ -57,11 +57,11 @@ if ( $ourteam_query->have_posts() ) :
             </div>
           </div>
         </div>
-       <?php 
+       <?php
         endwhile;
         wp_reset_postdata();
        ?>
       </div>
     </div>
   </section>
-  <?php endif;?>
+  <?php } ?>

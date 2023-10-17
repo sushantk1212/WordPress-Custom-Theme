@@ -1,4 +1,4 @@
-<?php 
+<?php
     $testimonial_args = array(
         'post_type'      => 'testimonials',
         'posts_per_page' => -1
@@ -24,11 +24,11 @@ if ( $testimonial_query->have_posts() ) :
             <div class="row">
               <div class="col-lg-7 col-md-9 mx-auto">
                 <div class="client_container ">
-                  <?php if(has_post_thumbnail()):?>  
+                  <?php if(has_post_thumbnail()):?>
                     <div class="img-box">
                         <?php the_post_thumbnail(array(250, 250));?>
                     </div>
-                   <?php endif;?> 
+                   <?php endif;?>
                   <div class="detail-box">
                     <h5>
                         <?php the_title();?>
@@ -42,7 +42,7 @@ if ( $testimonial_query->have_posts() ) :
               </div>
             </div>
           </div>
-          <?php 
+          <?php
             $counter_testi++;
             endwhile;
             wp_reset_postdata();
